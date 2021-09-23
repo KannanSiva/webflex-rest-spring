@@ -21,7 +21,6 @@ public class CategoryController {
     
     @GetMapping("/api/v1/categories")
     Flux<Category> list(){
-	
 	return categoryRepository.findAll();
 	
     }

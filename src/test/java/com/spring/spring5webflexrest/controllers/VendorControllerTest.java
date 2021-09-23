@@ -29,8 +29,8 @@ class VendorControllerTest {
 
     @Test
     void testList() {
-	BDDMockito.given(vendorRepository.findAll()).willReturn(Flux.just(Vendor.builder().firstName("Berlin").build(),
-		Vendor.builder().lastName("AlansoPedro").build()));
+	BDDMockito.given(vendorRepository.findAll()).willReturn(Flux.just(Vendor.builder().firstName("Berlin").lastName("AlansoPedro").build(),
+		Vendor.builder().firstName("Siva").lastName("Berlin").build()));
 	
 	webTestClient.get()
 			.uri("/api/v1/vendors")
